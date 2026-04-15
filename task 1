@@ -1,0 +1,40 @@
+class Robot {
+    public: 
+    void readDistanceSensor(); 
+    void moveForward();
+    void avoidObstacle();
+    void readEncoder(); 
+    }; 
+
+
+ /////////////////////////////
+
+
+class Comms{
+    public:
+    void readEncoder();
+    void sendStatus();
+
+};
+
+class Motor{
+    public:
+    void moveForward();
+    void turn();
+
+
+};
+
+class Sensors{
+    public:
+    void readDistanceSensor();
+}
+
+class Control{
+    public:
+    void avoidObstacle();
+
+
+}
+
+
