@@ -1,0 +1,33 @@
+class TemperatureSensor : public Sensor {
+     public: 
+     int read() override { return 10; } };
+     
+     
+class PressureSensor : public Sensor {
+     public: int read() override { return 20; } };
+     
+     
+class MeasurementSystem {
+     private:
+      Sensor* sensor; 
+      public: 
+      MeasurementSystem(Sensor* s) : sensor(s){} void checkTemperature(){ int value = sensor->read(); 
+        if (value > 37) { // high temperature detected 
+           printf("testing, testing \n");
+         } 
+        }
+        elif{
+            printf("testing, testing, testing \n");
+        } 
+    }; 
+
+    int main(){
+        Sensor* s1 = new TemperatureSensor();
+        Sensor* s2 = new PressureSensor(); 
+        
+        MeasurementSystem r1(s1); 
+        MeasurementSystem r2(s2); 
+        r1.checkTemperature;
+        r2.checkTemperature;
+        return 0;
+    }
